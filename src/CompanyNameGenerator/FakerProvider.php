@@ -7,11 +7,66 @@ namespace CompanyNameGenerator;
  */
 class FakerProvider extends \Faker\Provider\Base
 {
-    protected static $techTerms = ['Insulators', 'General Contracters', 'Painters', 'Plasterers', 'Plumbers', 'Gardeners', 'Drywallers'];
+    protected static $techTerms = [
+        'Insulators',
+        'General Contractors',
+        'House Painters',
+        'Plasterers',
+        'Plumbers',
+        'Gardeners',
+        'Drywallers',
+        'Carpenters',
+        'Electricians',
+        'Fencers',
+        'Glaziers',
+        'Landscapers',
+        'Decorators',
+        'Pipefitters',
+        'Waterproofers',
+        'Welders',
+    ];
 
-    protected static $marioTerms = ['Mario', 'Luigi', 'Toad', 'Bowser', 'Peach', 'Daisy', 'Wario', 'Yoshi', 'Donkey Kong', 'Koopa', 'Waluigi', 'Wart'];
+    protected static $marioTerms = [
+        'Birdo',
+        'Mario',
+        'Luigi',
+        'Toad',
+        'Toadette',
+        'Bowser',
+        'Bowser Jr.',
+        'Princess Peach',
+        'Princess Daisy',
+        'Wario',
+        'Yoshi',
+        'Donkey Kong',
+        'King Boo',
+        'Koopa',
+        'Kamek',
+        'Waluigi',
+        'Wart',
+    ];
 
-    protected static $colorTerms = ['Blue', 'Green', 'Orange', 'Purple', 'Red'];
+    protected static $colorTerms = [
+        'Blue',
+        'Green',
+        'Orange',
+        'Purple',
+        'Red',
+        'Yellow',
+        'Purple',
+        'White',
+        'Black',
+        'Grey',
+        'Brown',
+        'Violet',
+        'Magenta',
+        'Gold',
+        'Cyan',
+        'Turquoise',
+        'Indigo',
+        'Lavender',
+        'Olive',
+    ];
 
     protected static $companyNameFormats = [
         '{{marioTerm}} {{techTerm}}',
