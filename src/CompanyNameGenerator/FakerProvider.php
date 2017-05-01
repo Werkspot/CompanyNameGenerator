@@ -68,9 +68,19 @@ class FakerProvider extends \Faker\Provider\Base
         'Olive',
     ];
 
+    protected static $extensionTerms = [
+        'Inc.',
+        'Ltd.',
+        'LLC',
+        'LLP',
+        'Corp.',
+        'd/b/a',
+    ];
+
     protected static $companyNameFormats = [
-        '{{marioTerm}} {{techTerm}}',
-        '{{colorTerm}} {{marioTerm}} {{techTerm}}',
+        '{{marioTerm}} {{techTerm}} {{extensionTerm}}',
+        '{{colorTerm}} {{marioTerm}} {{techTerm}} {{extensionTerm}}',
+        '{{marioTerm}} {{colorTerm}} {{techTerm}} {{extensionTerm}}',
     ];
 
     public static function techTerm()
@@ -86,6 +96,11 @@ class FakerProvider extends \Faker\Provider\Base
     public static function marioTerm()
     {
         return static::randomElement(static::$marioTerms);
+    }
+
+    public static function extensionTerm()
+    {
+        return static::randomElement(static::$extensionTerms);
     }
 
     public function companyName()
